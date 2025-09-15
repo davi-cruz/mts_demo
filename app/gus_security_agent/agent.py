@@ -119,7 +119,7 @@ def create_agent():
 
   agent = Agent(
       model=os.environ.get("GOOGLE_MODEL"), 
-      name="gus_security_agent",
+      name=os.environ.get("APP_NAME"),
       instruction=os.environ.get("DEFAULT_PROMPT"),
       tools=tools,
       before_model_callback=bmc_trim_llm_request,
